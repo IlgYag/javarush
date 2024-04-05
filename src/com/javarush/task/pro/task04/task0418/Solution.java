@@ -8,15 +8,15 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
+        double glass = 0.5;
         Scanner scanner = new Scanner(System.in);
         boolean optim = scanner.nextBoolean();
-        double glass = 0.5;
 
 
         if (optim) {
             int rezOpt = (int) (Math.ceil(glass));
             System.out.println(rezOpt);//напишите тут ваш код
-        } else if (!optim) {
+        } else {
             int rezPess = (int) (Math.floor(glass));
             System.out.println(rezPess);
         }

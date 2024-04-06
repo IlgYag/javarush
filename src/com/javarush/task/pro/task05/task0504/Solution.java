@@ -14,10 +14,10 @@ public class Solution {
         int l2 = secondArray.length;
         int l = l1 + l2;
         resultArray = new int[l];
-        for (int i = 0; i < l1; i++);{
+        for (int i = 0; i < l1; i++){
             resultArray[i] = firstArray[i];
         }
-        for (int i = 0; i < l2; i++);{
+        for (int i = 0; i < l2; i++){
             resultArray[l1+i] = secondArray[i];
         }
         //напишите тут ваш код

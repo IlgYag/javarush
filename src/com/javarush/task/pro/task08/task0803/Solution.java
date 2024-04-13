@@ -14,12 +14,19 @@ public class Solution {
     }
 
     public static int min(int[] ints) {
-        //напишите тут ваш код
-        return 0;
+        int minVal = ints[0];
+        for (int val: ints) {
+            minVal = Math.min(minVal, val);//напишите тут ваш код
+        }//напишите тут ваш код
+        return minVal;
     }
 
     public static int[] getArrayOfTenElements() {
-        //напишите тут ваш код
-        return new int[10];
+        Scanner console = new Scanner(System.in);
+        int[] arrayOf10El = new int[10];
+        for (int i = 0; i < arrayOf10El.length; i++) {
+            arrayOf10El[i] = console.nextInt();//напишите тут ваш код
+        }
+        return arrayOf10El;
     }
 }

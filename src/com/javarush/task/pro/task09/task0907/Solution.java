@@ -17,8 +17,11 @@ public class Solution {
     }
 
     public static String toHex(int decimalNumber) {
-        //напишите тут ваш код
-        return null;
+        String result = "";
+        if (decimalNumber <= 0){
+            return result;//напишите тут ваш код
+        }
+            return null;
     }
 
     public static int toDecimal(String hexNumber) {

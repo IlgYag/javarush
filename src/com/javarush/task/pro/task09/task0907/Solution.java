@@ -21,6 +21,10 @@ public class Solution {
         if (decimalNumber <= 0){
             return result;//напишите тут ваш код
         }
+        while (decimalNumber!=0){
+
+        }
+
             return null;
     }
 

@@ -16,12 +16,32 @@ public class Solution {
     }
 
     public static String toHex(String binaryNumber) {
-        //напишите тут ваш код
+        String result = "";
+        if (binaryNumber == null || binaryNumber.indexOf('0') < 0 || binaryNumber.indexOf('1') < 0) {
+            return result;//напишите тут ваш код
+        }
+        if (binaryNumber.length() % 4 != 0) {
+            for (int i = 0; i < binaryNumber.length() % 4; i++) {
+                binaryNumber = "0" + binaryNumber;
+            }
+        }
+        for (int i = 0; i < binaryNumber.length() / 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                double hex = 0;
+                hex = binaryNumber.charAt(i * j) * Math.pow(2, j + 4) + hex;
+                result=result+hex;
+            }
+
+        }
+        result
         return null;
     }
 
     public static String toBinary(String hexNumber) {
-        //напишите тут ваш код
+        String result = "";
+        if (hexNumber == null) {
+            return result;//напишите тут ваш код
+        }
         return null;
     }
 }

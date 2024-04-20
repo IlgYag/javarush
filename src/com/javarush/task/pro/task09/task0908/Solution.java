@@ -33,8 +33,7 @@ public class Solution {
             }
 
         }
-        result
-        return null;
+        return result;
     }
 
     public static String toBinary(String hexNumber) {

@@ -18,18 +18,26 @@ public class Solution {
 
     public static String toHex(int decimalNumber) {
         String result = "";
-        if (decimalNumber <= 0){
+        if (decimalNumber <= 0) {
             return result;//напишите тут ваш код
         }
-        while (decimalNumber!=0){
-
+        while (decimalNumber != 0) {
+            int index = decimalNumber % 16;
+            result = HEX.charAt(index) + result;
+            decimalNumber = decimalNumber / 16;
         }
-
-            return null;
+        return result;
     }
 
     public static int toDecimal(String hexNumber) {
-        //напишите тут ваш код
-        return 0;
+        int result = 0;
+        if (hexNumber == null) {
+            return result;
+        }
+        for (int i = 0; i < hexNumber.length(); i++) {
+            int index = HEX.indexOf(hexNumber.charAt(i));
+            result = 16 * result + index;//напишите тут ваш код
+        }
+        return result;
     }
 }

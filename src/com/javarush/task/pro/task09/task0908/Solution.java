@@ -25,13 +25,15 @@ public class Solution {
                 binaryNumber = "0" + binaryNumber;
             }
         }
-        for (int i = 0; i < binaryNumber.length() / 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                double hex = 0;
-                hex = binaryNumber.charAt(i * j) * Math.pow(2, j + 4) + hex;
-                result=result+hex;
-            }
 
+        for (int i = 0; i < binaryNumber.length()/4; i++) {
+            double hex = 0;
+            for (int j = 0; j < 4; j++) {
+                String strVal = String.valueOf(binaryNumber.charAt(i+j));
+                int val = Integer.valueOf(strVal);
+                hex = val * Math.pow(2, 3 - j) + hex;
+            }
+            result = result + hex;
         }
         return result;
     }

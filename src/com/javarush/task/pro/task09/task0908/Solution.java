@@ -26,14 +26,28 @@ public class Solution {
             }
         }
 
-        for (int i = 0; i < binaryNumber.length()/4; i++) {
-            double hex = 0;
+        for (int i = 0; i < binaryNumber.length() / 4; i++) {
+            int hex = 0;
             for (int j = 0; j < 4; j++) {
-                String strVal = String.valueOf(binaryNumber.charAt(i+j));
+                String strVal = String.valueOf(binaryNumber.charAt(i * 4 + j));
                 int val = Integer.valueOf(strVal);
-                hex = val * Math.pow(2, 3 - j) + hex;
+                hex = (int) (val * Math.pow(2, 3 - j)) + hex;
             }
-            result = result + hex;
+            if (hex == 10) {
+                result = result + "a";
+            } else if (hex == 11) {
+                result = result + "b";
+            } else if (hex == 12) {
+                result = result + "c";
+            } else if (hex == 13) {
+                result = result + "d";
+            } else if (hex == 14) {
+                result = result + "e";
+            } else if (hex == 15) {
+                result = result + "f";
+            } else {
+                result = result + hex;
+            }
         }
         return result;
     }

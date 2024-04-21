@@ -57,6 +57,29 @@ public class Solution {
         if (hexNumber == null) {
             return result;//напишите тут ваш код
         }
-        return null;
+        for (int i = 0; i < hexNumber.length() ; i++) {
+            int binarVal = 0;
+            //for (int j = 0; j < 4; j++) {
+                String strVal = String.valueOf(hexNumber.charAt(i));
+                //int val = Integer.valueOf(strVal);
+               // hex = (int) (val * Math.pow(2, 3 - j)) + hex;
+            //}
+            if (strVal.equals("a")) {
+                result = result + "1010";
+            } else if (strVal.equals("b")) {
+                result = result + "1011";
+            } else if (strVal.equals("c")) {
+                result = result + "1100";
+            } else if (strVal.equals("d")) {
+                result = result + "1101";
+            } else if (strVal.equals("e")) {
+                result = result + "1110";
+            } else if (strVal.equals("f")) {
+                result = result + "1111";
+            } else {
+                result = result+"0000";
+            }
+        }
+        return result;
     }
 }

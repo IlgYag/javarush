@@ -77,7 +77,11 @@ public class Solution {
             } else if (strVal.equals("f")) {
                 result = result + "1111";
             } else {
-                result = result+"0000";
+                int val = Integer.valueOf(strVal);
+                while (val/2!=0) {
+                    result = result+val%2;
+                    val=val/2;
+                }
             }
         }
         return result;

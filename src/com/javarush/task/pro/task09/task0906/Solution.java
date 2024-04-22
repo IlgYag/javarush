@@ -8,12 +8,12 @@ import java.util.regex.Pattern;
 
 public class Solution {
     public static void main(String[] args) {
-        int decimalNumber = Integer.MAX_VALUE;
+        //int decimalNumber = Integer.MAX_VALUE;
+        int decimalNumber = 9;
         System.out.println("Десятичное число " + decimalNumber + " равно двоичному числу " + toBinary(decimalNumber));
         String binaryNumber = "1111111111111111111111111111111";
         System.out.println("Двоичное число " + binaryNumber + " равно десятичному числу " + toDecimal(binaryNumber));
     }
-
     public static String toBinary(int decimalNumber) {
         String binaryVal = "";
         if (decimalNumber <= 0) {
@@ -26,7 +26,6 @@ public class Solution {
         }
         return binaryVal;
     }
-
     public static int toDecimal(String binaryNumber) {
         int decimalVal = 0;
         if (binaryNumber == null){

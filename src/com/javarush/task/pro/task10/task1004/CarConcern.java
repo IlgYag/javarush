@@ -26,6 +26,6 @@ public class CarConcern {
         this.model = model;
         this.year = 4321;
         this.color = "Оранжевый";
-        //напишите тут ваш код
+
     }
 }

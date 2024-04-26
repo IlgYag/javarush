@@ -13,6 +13,6 @@ public class Programmer {
 
     public void setSalary(int salary) {
         this.salary = salary > this.salary ? salary : this.salary;
-    }//напишите тут ваш код
+    }
 
 }

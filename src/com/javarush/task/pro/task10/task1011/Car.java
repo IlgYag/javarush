@@ -15,9 +15,10 @@ public class Car {
         this.year = year;
     }
 
-    public int hashCode(){
-
-        return Objects.hash(model,year);
+    public int hashCode()
+    {
+    return model.hashCode()+year;
+    //    return Objects.hash(model,year);
     }//напишите тут ваш код
 
     public static void main(String[] args) {

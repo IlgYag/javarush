@@ -27,7 +27,6 @@ public class CustomStringArrayList {
     }
 
     private void grow() {
-
         String[] tmpArray = elements;
         capacity = (int) (capacity * 1.5);
         elements = Arrays.copyOf(tmpArray,capacity);

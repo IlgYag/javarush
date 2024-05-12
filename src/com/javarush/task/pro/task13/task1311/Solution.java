@@ -2,6 +2,7 @@ package com.javarush.task.pro.task13.task1311;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /* 
 Успеваемость студентов-3
@@ -24,6 +25,11 @@ public class Solution {
     }
 
     public static void printStudentsInfo() {
-        //напишите тут ваш код
+//      Set<Map.Entry<String,Double>> studData = grades.entrySet();
+        for (Map.Entry<String, Double> studWithMark : grades.entrySet()) {
+//          String Name = studWithMark.getKey();
+//          Double Mark = studWithMark.getValue();
+            System.out.println(studWithMark.getKey() + " : " + studWithMark.getValue());
+        }
     }
 }

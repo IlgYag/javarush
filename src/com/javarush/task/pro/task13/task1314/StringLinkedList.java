@@ -24,16 +24,14 @@ public class StringLinkedList {
     }
 
     public String get(int index) {
-        String strInList = null;
         Node curentNode = first.next;
         for (int i = 0; i < index; i++) {
-            if (curentNode.next == null) {
-               return strInList;
+            if (curentNode.next.equals(last)) {
+               return null;
             }
             curentNode = curentNode.next;
         }
-        strInList = curentNode.value;
-        return strInList;
+        return curentNode.value;
     }
 
     public static class Node {

@@ -13,7 +13,9 @@ public class Solution {
     }
 
     public static void printStackTrace(StackTraceElement[] stackTrace) {
-        //напишите тут ваш код
+        for (int i = 0; i < stackTrace.length; i++){
+            System.out.printf(OUTPUT_FORMAT, stackTrace[i].getMethodName(), stackTrace[i].getLineNumber(), stackTrace[i].getClassName(), stackTrace[i].getFileName());//напишите тут ваш код
+        }
     }
 
     static void makeScrewdriver() {
